@@ -1,0 +1,26 @@
+@import "../utils/colors.scss";
+
+.inventory {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, auto));
+  grid-template-rows: repeat(10, minmax(auto, auto));
+  row-gap: 1rem;
+  column-gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.inventory_cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid $maron;
+
+  &:hover {
+    background-color: $blue;
+  }
+
+  transition: all 0.2s;
+}

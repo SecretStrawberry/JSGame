@@ -1,0 +1,84 @@
+@import "../utils/colors.scss";
+
+.character_itmesContainer {
+  position: absolute;
+  display: grid;
+
+  align-items: center;
+  justify-items: center;
+
+  grid-template-columns: repeat(2, 15rem);
+  grid-template-rows: repeat(3, 15rem);
+}
+
+.character {
+  &_helm {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  &_wepon {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  &_armor {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  &_boots {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 8rem;
+    height: 9rem;
+
+    border: 1px solid $maron;
+
+    font-size: 5rem;
+  }
+}
+
+.character_wepon-stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: $maron;
+  color: $blue;
+}
+
+.character_stats-container {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 25rem;
+  padding: 2rem 4rem;
+
+  box-shadow: inset 0px 0px 0px 10px $blue;
+
+  background-color: $maron;
+
+  opacity: 0;
+
+  & > p {
+    font-size: 2rem;
+    color: $blue;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  transition: all 0.2s;
+}
