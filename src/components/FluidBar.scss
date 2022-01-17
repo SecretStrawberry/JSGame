@@ -1,0 +1,19 @@
+@import "../utils/colors.scss";
+
+.fluid_bar {
+  width: 9rem;
+  height: 2rem;
+  background-color: $white;
+  border: 1px solid $white;
+
+  border-radius: 3px;
+}
+
+.bar {
+  width: 80%;
+  height: 100%;
+  background-color: $health;
+
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}

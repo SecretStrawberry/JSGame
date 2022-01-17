@@ -1,12 +1,29 @@
 @import "../utils/colors.scss";
 
 .inventory {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(auto, auto));
-  grid-template-rows: repeat(10, minmax(auto, auto));
-  row-gap: 1rem;
-  column-gap: 1rem;
-  padding: 1rem 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/background-small1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include boxShadow-bigBlue;
+  @include borderBlue;
+
+  & > h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &_container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, auto));
+    grid-template-rows: repeat(10, minmax(auto, auto));
+    row-gap: 1rem;
+    column-gap: 1rem;
+
+    padding: 2rem 2rem;
+  }
 }
 
 .inventory_cell {
@@ -16,11 +33,9 @@
 
   width: 5rem;
   height: 5rem;
-  border: 1px solid $maron;
-
-  &:hover {
-    background-color: $blue;
-  }
+  @include boxShadow-bigDark;
+  @include borderBlue;
+  background-color: $background-lighter;
 
   transition: all 0.2s;
 }

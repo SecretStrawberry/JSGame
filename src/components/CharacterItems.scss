@@ -37,9 +37,18 @@
     width: 8rem;
     height: 9rem;
 
-    border: 1px solid $maron;
+    @include boxShadow-bigDark;
+    @include borderBlue;
+    background-color: $background-lighter;
 
     font-size: 5rem;
+
+    &:hover {
+      .character_stats-container {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
   }
 }
 
@@ -56,13 +65,14 @@
 
 .character_stats-container {
   position: absolute;
+  z-index: -1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  height: 25rem;
+  // height: 25rem;
   padding: 2rem 4rem;
 
   box-shadow: inset 0px 0px 0px 10px $blue;
@@ -74,10 +84,6 @@
   & > p {
     font-size: 2rem;
     color: $blue;
-  }
-
-  &:hover {
-    opacity: 1;
   }
 
   transition: all 0.2s;

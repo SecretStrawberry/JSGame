@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "../utils/colors.scss";
+
+.charcter {
+  display: flex;
+  width: 30rem;
+  height: 100%;
+
+  font-family: "Comfortaa", cursive;
+
+  color: $white;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/background-small1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include boxShadow-bigBlue;
+  @include borderBlue;
+}
+
+.charcter {
+  &_identity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  &_credentials {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    & > span {
+      padding: 0.5rem 0.25rem;
+    }
+  }
+  &_level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    & > span {
+      font-size: 2rem;
+    }
+  }
+}
+
+.charcter {
+  &_name {
+    font-family: "Alegreya", serif;
+    color: $maron;
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+}
+
+.charcter {
+  &_image {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 28rem;
+  }
+}

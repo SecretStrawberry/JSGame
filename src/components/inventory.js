@@ -15,7 +15,12 @@ function Inventory() {
     return grid;
   }
 
-  return <div className="inventory">{makeGrid(40).flat()}</div>;
+  return (
+    <div className="inventory">
+      <h3>Inventory</h3>
+      <div className="inventory_container">{makeGrid(40).flat()}</div>
+    </div>
+  );
 }
 
 export default Inventory;

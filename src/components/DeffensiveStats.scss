@@ -1,0 +1,15 @@
+@import "../utils/colors.scss";
+
+.deffence {
+  @include boxShadow-bigBlue;
+  @include borderBlue;
+  background-color: $background-lighter;
+  padding: 1rem 2rem;
+  &_box {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+  }
+}

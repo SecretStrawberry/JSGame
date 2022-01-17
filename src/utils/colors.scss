@@ -1,9 +1,23 @@
 $white: #ececec;
 $background: #222831;
+$background-lighter: #212730;
+$background-darker: #060708;
 $blue: #30475e;
 $maron: #c1a57b;
 
 $health: #e36488;
 $attack: #aef4a4;
-$agility: #79b8d1;
+$magic: #79b8d1;
 $defence: #fffdb7;
+
+@mixin boxShadow-bigDark {
+  box-shadow: 5px 5px 10px inset #000;
+}
+
+@mixin boxShadow-bigBlue {
+  box-shadow: 2px 2px 7px 3px $blue;
+}
+
+@mixin borderBlue {
+  border: 1px solid $blue;
+}

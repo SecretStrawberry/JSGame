@@ -21,7 +21,6 @@ function CharacterItems() {
     const { ...stats } = statsObject;
     const statsArray = [];
     for (const [key, value] of Object.entries(stats)) {
-      console.log(key, value);
       statsArray.push(
         <div key={key} className="character_wepon-stats">
           <span className="character_wepon-stats--name">{key}</span>
