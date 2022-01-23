@@ -25,7 +25,7 @@ function CharacterFluids() {
     return fluidSObject;
   }
 
-  const health = fluidsCalculator(200, 5); // (pointsValue, percentage )
+  const health = fluidsCalculator(200, 24); // (pointsValue, percentage )
   const mana = fluidsCalculator(400, 80);
 
   return (

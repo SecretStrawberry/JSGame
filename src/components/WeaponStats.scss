@@ -1,0 +1,137 @@
+@import "../utils/colors.scss";
+
+.weapon {
+  width: 25%;
+
+  margin: 0 auto;
+  margin-top: 6rem;
+  padding: 2rem;
+
+  border: 4px solid $maron_3;
+  background-color: $background-darker;
+
+  font-size: 1.2rem;
+
+  &_name {
+    text-align: center;
+    font-size: 1.6rem;
+
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+
+    border: 1px solid $maron_2;
+
+    color: $gold;
+    background-image: radial-gradient($maron_2, $maron_2, $background-lighter);
+  }
+
+  &_stats {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+
+    border: 1px solid $maron_2;
+  }
+
+  &_overall {
+    display: grid;
+    grid-template-columns: 1fr 20rem 1fr;
+    grid-template-rows: 1fr 1fr 1fr max-content;
+
+    &--image {
+      grid-column: 1;
+      grid-row: 1 / 4;
+
+      justify-self: start;
+      align-self: start;
+
+      border: 1px solid $maron_2;
+      height: 100%;
+      width: 85%;
+    }
+    &--description {
+      grid-column: 2;
+      grid-row: 1;
+
+      width: 60%;
+
+      color: $gold;
+    }
+    &--totalDamage {
+      grid-column: 2;
+      grid-row: 2;
+
+      font-size: 3rem;
+    }
+    &--damagePerSecond {
+      grid-column: 2;
+      grid-row: 4;
+
+      font-size: 1.1rem;
+
+      & > ul {
+        list-style: none;
+        padding: 0;
+        // Damage per second numbers color //////
+        & > li {
+          & > span:first-of-type {
+            color: $magic;
+          }
+        }
+      }
+
+      align-self: end;
+    }
+    &--wield {
+      grid-column: 3;
+      grid-row: 1;
+
+      justify-self: end;
+
+      font-size: 1rem;
+    }
+  }
+
+  &_damageStats {
+    color: $magic;
+    padding: 1rem;
+    & > li:first-child {
+      color: $white;
+      list-style: none;
+      margin-left: -1rem;
+    }
+  }
+
+  &_level {
+    text-align: right;
+  }
+
+  &_miscellaneous {
+    padding: 1rem;
+
+    border: 1px solid $maron_2;
+
+    & > ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      & > li {
+        list-style: none;
+      }
+    }
+  }
+
+  &_sellValue {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 28%;
+
+    & > li {
+      list-style: none;
+    }
+
+    &--coinColor {
+      color: $gold;
+    }
+  }
+}
