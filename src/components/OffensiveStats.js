@@ -6,7 +6,8 @@ function OffensiveStats() {
   return (
     <div className="offence">
       <div className="offence_box offence_damage">
-        <span>Damage</span> <span>239</span>
+        <span>Damage</span>
+        <span>239</span>
       </div>
       <div className="offence_box offence_accuracy">
         <span>Accuracy</span> <span>877</span>

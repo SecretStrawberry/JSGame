@@ -5,6 +5,8 @@ import FluidBar from "./FluidBar";
 
 import { GiHeartPlus, GiPotionBall } from "react-icons/gi";
 
+//// TODO:  redo THE fluidsCalculator so it can be called as a prop so we can use different values in diferent places
+
 function CharacterFluids() {
   // calculates the fluids in percentage and puts them in te fluidsObject
   // takes in maximum fluid points ex: health, mana; and the percentage that should never be more then 100 or lesser then 0

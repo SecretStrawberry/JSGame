@@ -1,13 +1,14 @@
 @import "../utils/colors.scss";
 
 .weapon {
-  width: 25%;
+  position: relative;
+  width: 100%;
 
   margin: 0 auto;
   margin-top: 6rem;
   padding: 2rem;
 
-  border: 4px solid $maron_3;
+  @include borderMaron3;
   background-color: $background-darker;
 
   font-size: 1.2rem;
@@ -19,10 +20,7 @@
     margin-bottom: 0.5rem;
     padding: 1rem;
 
-    border: 1px solid $maron_2;
-
-    color: $gold;
-    background-image: radial-gradient($maron_2, $maron_2, $background-lighter);
+    @include borderBackgroundTitles;
   }
 
   &_stats {
@@ -75,6 +73,7 @@
         & > li {
           & > span:first-of-type {
             color: $magic;
+            margin-right: 0.5rem;
           }
         }
       }
@@ -94,10 +93,17 @@
   &_damageStats {
     color: $magic;
     padding: 1rem;
+    // The title of Primary and Secondary Damage
     & > li:first-child {
       color: $white;
       list-style: none;
       margin-left: -1rem;
+    }
+    // the small white space between damage numbers and damage description on Primary and secondary item stats
+    & > li:not(:first-of-type) {
+      & > span:first-of-type {
+        margin-right: 0.5rem;
+      }
     }
   }
 
@@ -124,14 +130,26 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 28%;
+    width: 35%;
 
     & > li {
       list-style: none;
+      & > span:first-of-type {
+        margin-right: 0.5rem;
+      }
     }
 
     &--coinColor {
       color: $gold;
+    }
+  }
+
+  &_durability {
+    & > li {
+      list-style: none;
+      & > span:first-of-type {
+        margin-right: 0.5rem;
+      }
     }
   }
 }

@@ -1,0 +1,109 @@
+@import "../../utils/colors.scss";
+
+.startPage {
+  color: $background;
+
+  background-image: linear-gradient(to right, rgba(#000, 0.7), rgba(#000, 0.8)),
+    url("../../images/background3.jpg");
+
+  &_header {
+    display: flex;
+    flex-direction: column;
+    background-color: $blue;
+    padding: 4rem 0;
+    & > h1 {
+      text-align: center;
+      font-size: 4rem;
+    }
+  }
+
+  &_user-tab {
+    align-self: flex-end;
+    width: 30%;
+
+    padding-right: 3rem;
+    text-align: right;
+  }
+
+  &_heroDetails {
+    display: flex;
+    justify-content: space-between;
+
+    width: 80%;
+
+    margin: 0 auto;
+    margin-top: 5rem;
+
+    padding: 3rem;
+
+    &--listContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 30%;
+      padding: 4rem;
+
+      @include borderBlue;
+      @include boxShadow-bigBlue;
+      background-color: $background-darker;
+    }
+
+    &--title {
+      width: 90%;
+
+      color: $maron;
+      @include borderBlue;
+
+      & > h4 {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+
+    &--HeroList {
+      width: 100%;
+
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-top: 1rem;
+
+        font-size: 2rem;
+
+        padding: 1rem 2rem;
+
+        border: 1px solid $blue;
+        color: $white;
+
+        & > span {
+          text-align: right;
+          width: 33%;
+        }
+
+        & > span:not(:last-of-type) {
+          text-align: left;
+        }
+      }
+
+      & > div:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &_heroScreen {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+
+    & > div:last-of-type {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

@@ -25,3 +25,17 @@ $maron_3: #c87941;
 @mixin borderBlue {
   border: 1px solid $blue;
 }
+
+@mixin borderMaron3 {
+  border: 4px solid $maron_3;
+}
+
+@mixin borderThick {
+  border: 4px solid $maron_2;
+}
+
+@mixin borderBackgroundTitles {
+  border: 1px solid $maron_2;
+  color: $gold;
+  background-image: radial-gradient($maron_2, $maron_2, $background-lighter);
+}

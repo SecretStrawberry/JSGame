@@ -6,7 +6,9 @@ import WeaponStats from "../../WeaponStats";
     primaryStats,
     secondaryStats,
     requiredLevel,
-    miscellaneous
+    miscellaneous,
+    sellValue,
+    durability
 */
 
 const weaponName = "Bow Of Thunder";
@@ -55,8 +57,6 @@ const sword = new WeaponStats(
   sellValue,
   durability
 );
-
-console.log(sword);
 
 function BowOfThunder() {
   return sword.displayStats();

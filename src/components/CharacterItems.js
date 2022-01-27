@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./CharacterItems.scss";
+import BowOfThunder from "../components/weapons/bows/>BowOfThunder";
 
 import {
   GiElfHelmet,
@@ -10,28 +11,6 @@ import {
 } from "react-icons/gi";
 
 function CharacterItems() {
-  const armsStats = {
-    damage: ["Damage", 100],
-    durability: ["Durability", 212],
-    level: ["Level", 69],
-    magicDamage: ["Magic Damage", 24],
-  };
-
-  function showWepStats(wepObject) {
-    const { ...stats } = wepObject;
-    const array = [];
-    for (const [key, value] of Object.entries(stats)) {
-      array.push(
-        <div key={key} className="character_wepon-stats">
-          <span className="character_wepon-stats--name">{value[0]}</span>
-          <span className="character_wepon-stats--value">{value[1]}</span>
-        </div>
-      );
-    }
-
-    return array;
-  }
-
   return (
     <div className="character_itmesContainer">
       <div className="character_item character_helm">
@@ -39,8 +18,7 @@ function CharacterItems() {
       </div>
       <div className="character_item character_wepon">
         <div className="character_stats-container">
-          <p>Lightning Bow</p>
-          {showWepStats(armsStats)}
+          <BowOfThunder />
         </div>
         <GiLightningBow />
       </div>

@@ -5,6 +5,8 @@
   @include borderBlue;
   background-color: $background-lighter;
   padding: 1rem 2rem;
+
+  color: $white;
   &_box {
     display: flex;
     justify-content: space-between;

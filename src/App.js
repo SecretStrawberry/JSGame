@@ -1,17 +1,12 @@
 import "./App.css";
 import React from "react";
 
-import HeroWindow from "./components/HeroWindow";
-import SwordOfMagic from "./components/weapons/swords/SwordOfMagic";
-import BowOfThunder from "./components/weapons/bows/>BowOfThunder";
+import StartPage from "../src/components/pages/StartPage";
 
 function App() {
   return (
     <div className="App">
-      <h1>learnig JS</h1>
-      <HeroWindow />
-      <SwordOfMagic />
-      <BowOfThunder />
+      <StartPage />
     </div>
   );
 }

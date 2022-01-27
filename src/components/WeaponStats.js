@@ -69,11 +69,14 @@ class WeaponStats {
     function stats(wepObject) {
       const { ...stats } = wepObject;
       const array = [];
-      for (const [, value] of Object.entries(stats)) {
+      // iterating over object to get the arrays
+      for (const [key, value] of Object.entries(stats)) {
         array.push(
-          <li>
-            <span>{value[0]} </span>
-            <span>{value[1]}</span>
+          // maping over each array and returning each item in a span
+          <li key={key}>
+            {value.map((item, key) => (
+              <span key={key}>{item}</span>
+            ))}
           </li>
         );
       }
@@ -125,8 +128,7 @@ class WeaponStats {
               {sellValue}
               <GiTwoCoins className="weapon_sellValue--coinColor" />
             </div>
-
-            {durability}
+            <div className="weapon_durability">{durability}</div>
           </ul>
         </div>
       </div>
